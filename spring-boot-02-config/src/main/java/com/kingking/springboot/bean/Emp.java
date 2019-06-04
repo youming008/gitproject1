@@ -1,8 +1,11 @@
 package com.kingking.springboot.bean;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -15,11 +18,24 @@ import java.util.Map;
  * @Component  必须使用这个标签将当前组件作为 springboot中的一个组件来使用，这样才会纳入容器管理
  *
  */
+@Validated
 @Component
 @ConfigurationProperties(prefix="emp")
 public class Emp {
+    /**
+     * @Value 类似于Spring框架中使用配置文件中的数据注入方式
+     * <bean>
+     *     <property name="lastName" value = "字面量 /#{SpEL}  spring表达式 ${key} 从配置文件中获取"></property>
+     *
+     * </bean>
+     *
+     */
+//    @Value("${emp.last-name}}")
+    @Email
     private String lastName;
+    @Value("#{10*2}")
     private Integer age;
+    @Value("90099")
     private Double salary;
     private Boolean boss;
     private Date birthday;

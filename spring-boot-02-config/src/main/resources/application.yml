@@ -1,0 +1,21 @@
+server:
+  port: 8099 # 冒号 后面 需要有个空格
+#emp 的配置数据
+emp:
+  lastName: xiaohei
+  age: 18
+  salary: 10000
+  boss: true
+  birthday: 1988/09/09
+  map:
+    key1: value1
+    key2: value2
+
+  list:
+    - list1
+    - list2
+    - list3
+
+  forte:
+    name: football
+    time: 10

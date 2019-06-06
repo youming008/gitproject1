@@ -1,0 +1,4 @@
+2019-06-06 17:01:33.600  INFO 4164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-06 17:01:34.674  WARN 4164 --- [main] .k.s.SpringBoot03LoggingApplicationTests : 这是 warn 日志级别
+2019-06-06 17:01:34.675 ERROR 4164 --- [main] .k.s.SpringBoot03LoggingApplicationTests : 这是  error 日志级别
+2019-06-06 17:01:34.692  INFO 4164 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
